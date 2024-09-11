@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "cropper-example"
 include(":app")
- 
+include(":cropper")
