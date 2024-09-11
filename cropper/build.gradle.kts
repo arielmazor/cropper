@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id("maven-publish")
+    id("maven-publish") apply true
 }
 
 android {
@@ -62,7 +62,7 @@ publishing {
         create("release", MavenPublication::class) {
             groupId = "com.github.arielmazor"
             artifactId = "cropper"
-            version = "1.0.2"
+            version = "1.0.3"
 
             afterEvaluate {
                 from(components["release"])
