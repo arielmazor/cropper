@@ -24,20 +24,26 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             val ctx = LocalContext.current
-            val state = rememberCropperState(image = ImageBitmap.imageResource(id = R.drawable.fish))
+            val state =
+                rememberCropperState(image = ImageBitmap.imageResource(id = R.drawable.fish))
 
-            Column(Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
-
-            Box(modifier = Modifier
-                .fillMaxWidth()
-                .fillMaxHeight(.75f)) {
-             Cropper(state)
-            }
-                Button(onClick = { 
-                    state.crop()
-                    Toast.makeText(ctx, "cropped!", Toast.LENGTH_SHORT).show() }
+            Column(Modifier.fillMaxSize()) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .fillMaxHeight(.75f)
                 ) {
-                    Text(text = "Save")
+                    Cropper(state)
+                }
+                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+
+                    Button(onClick = {
+                        state.crop()
+                        Toast.makeText(ctx, "cropped!", Toast.LENGTH_SHORT).show()
+                    }
+                    ) {
+                        Text(text = "Save")
+                    }
                 }
             }
         }
