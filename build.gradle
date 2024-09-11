@@ -49,6 +49,15 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
+
+    publishing {
+        publishing {
+            singleVariant("release") {
+                withSourcesJar()
+                withJavadocJar()
+            }
+        }
+    }
 }
 
 dependencies {
@@ -63,14 +72,16 @@ dependencies {
     debugImplementation libs.androidx.ui.tooling
 }
 
-afterEvaluate {
-    publishing {
+publishing {
+    publications {
         release(MavenPublication) {
-            from components.release
+            groupId = 'com.github.arielmazor'
+            artifactId = 'cropper'
+            version = '1.0.0'
 
-            groupId = "com.github.arielmazor"
-            artifactId = "cropper"
-            version = "1.0"
+            afterEvaluate {
+                from components.release
+            }
         }
     }
 }
