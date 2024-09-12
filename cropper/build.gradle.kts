@@ -59,7 +59,7 @@ afterEvaluate {
             create("release", MavenPublication::class) {
                 groupId = "com.github.arielmazor"
                 artifactId = "cropper"
-                version = "1.0.6"
+                version = "1.0.7"
 
                 from(components["release"])
             }
