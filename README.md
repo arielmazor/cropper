@@ -1,6 +1,45 @@
+[![](https://jitpack.io/v/arielmazor/cropper.svg)](https://jitpack.io/#arielmazor/cropper)
 <h1 align="center" id="title">Cropper</h1>
+<p align="center">Lightweight cropping library for Jetpack compose</p> 
 
-<p align="center"><img src="https://socialify.git.ci/arielmazor/cropper/image?description=1&amp;descriptionEditable=Cropping%20library%20for%20Jetpack%20Compose&amp;issues=1&amp;language=1&amp;name=1&amp;owner=1&amp;theme=Light" alt="project-image"></p>
 
 <h2>🛠️ Installation Steps:</h2>
-<img src="https://jitpack.io/v/arielmazor/cropper.svg)](https://jitpack.io/#arielmazor/cropper" alt=""> 
+1. Download - Add the JitPack repository to your settings.grade
+
+```kotlin
+dependencyResolutionManagement {
+  repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+  repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+  }
+}
+```
+
+2. Add the dependency
+
+```kotlin
+dependencies {
+  implementation 'com.github.arielmazor:cropper:TAG'
+}
+```
+
+<h2>Usage</h2>
+
+1. Create A CropperState
+
+```kotlin
+val state = rememberCropperState(image = YOUR_IMAGE)
+```
+
+2. Usage - set your Cropper dimensions by wrapping it with aBox with custom width and height
+
+```kotlin
+Box(
+    modifier = Modifier
+        .fillMaxWidth()
+        .fillMaxHeight(.75f)
+) {
+    Cropper(state)
+}
+```
