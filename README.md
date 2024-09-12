@@ -1,5 +1,5 @@
 <h1 align="center" id="title">Cropper</h1>
-<p align="center">Fast <b>2kB</b> Cropping library for Jetpack compose.</p>
+<p align="center">Fast <b>60kB</b> Cropping library for Jetpack compose.</p>
 <p align="center">
    <a href="https://jitpack.io/#arielmazor/cropper"><img
             src="https://jitpack.io/v/arielmazor/cropper.svg" alt="License"></a>
