@@ -8,6 +8,10 @@
     <br>
 </p>
 
+<p align="center">
+<img src="https://github.com/user-attachments/assets/d28195f3-d9a1-45e2-b011-b17a8a1f3d4e" width="200">
+</p>
+
 <h2>🛠️ Installation Steps:</h2>
 1. Download - Add the JitPack repository to your settings.grade
 
