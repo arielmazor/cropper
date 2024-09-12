@@ -29,7 +29,7 @@ dependencyResolutionManagement {
 
 ```kotlin
 dependencies {
-    implementation 'com.github.arielmazor:cropper:TAG'
+    implementation 'com.github.arielmazor:cropper:1.0.7'
 }
 ```
 
