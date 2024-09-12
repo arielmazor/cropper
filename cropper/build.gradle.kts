@@ -62,7 +62,7 @@ publishing {
         create("release", MavenPublication::class) {
             groupId = "com.github.arielmazor"
             artifactId = "cropper"
-            version = "1.0.4"
+            version = "1.0.5"
 
             afterEvaluate {
                 from(components["release"])
